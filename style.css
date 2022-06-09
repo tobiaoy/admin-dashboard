@@ -1,0 +1,350 @@
+
+
+:root{
+    --indigo1: #eef2ff;
+    --indigo2: #e0e7ff;
+    --indigo3: #c7d2fe;
+    --indigo4: #818cf8;
+    --indigo: #4f46e5;
+    --primary: #60a5fa;
+    --accent: #021d5b;
+    --shadow: #bfdbfe;
+}
+
+*, *::after, *::before{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', 'Work Sans', 'Roboto', 'Montserrat', 'Source Sans', 'Segoe UI', 'Inter', 'Quicksand', sans-serif;
+    height: 100vh;
+    color: var(--indigo);
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+    'sidebar header'
+    'sidebar content'
+    ;
+}
+
+#header{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    grid-area: header;
+    background-color: var(--indigo1);
+    box-shadow: 0 5px 5px var(--shadow);
+    z-index: 1;
+    padding-left: 2rem;
+    padding-right: 2rem
+}
+
+#header > #upper{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+    'search account'
+    ;
+    margin-bottom: 2rem;
+}
+
+.search-bar{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    grid-area: search;
+    font-size: 1.25rem;
+}
+
+.search-bar > label{
+    font-size: 2rem;
+}
+
+#search{
+    border-style: none;
+    border-radius: 80em;
+    background-color: var(--indigo3);
+    height: 2rem;
+    width: 35rem;
+    padding: 10px 10px;
+}
+
+.account{
+    font-size: 1.05rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: account;
+    gap: 1rem;
+    margin-left: auto;
+}
+
+.account > .avi{
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    background-image: url(./avatars/glasses-guy.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#header > #lower{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+    'greeting buttons'
+    ;
+}
+
+.greeting{
+    font-size: 2rem;
+    grid-area: greeting;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.greeting > .avi{
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+    background-image: url(./avatars/glasses-guy.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.hello > .top{
+    font-size: 1.25rem;
+}
+
+.hello > .bottom{
+    font-size: 2.5rem;
+}
+
+.buttons{
+    grid-area: buttons;
+    display: flex;
+    gap: 1.25rem;
+    margin-left: auto;
+}
+
+button{
+    font-size: 1.5rem;
+    padding: 0.25rem 2.25rem;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 100em;
+    font-size: 1.15rem;
+    border-style: none;
+}
+
+button:hover{
+    background-color: var(--accent);
+}
+
+#sidebar{
+    grid-area: sidebar;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    color: var(--indigo1);
+    gap: 35px;
+}
+
+#sidebar-head{
+    display: flex;
+    gap: 10px;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+#menu{
+    display: flex;
+}
+
+#menu > ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#maintenance{
+    display: flex;
+}
+
+#maintenance > ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav-item > div{
+    display: flex;
+    gap: 10px;
+    font-size: 1.25rem;
+    align-items: center;
+}
+
+#sidebar > .material-icons{
+    font-size: 1.25rem;
+}
+
+#content{
+    padding: 20px;
+    grid-area: content;
+    background-color: var(--indigo3);
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-auto-rows: 75vh;
+    grid-template-areas: 
+    'projects announcements'
+    'projects trending'
+    ;
+    gap: 2em;
+}
+
+#projects{
+    grid-area: projects;
+}
+
+.cards{
+    padding-top: 1.5rem;
+    display: grid;
+    gap: 2rem;
+    grid-auto-rows: 200px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.project-title{
+    font-size: 1.5rem;
+}
+
+.cards > .card{
+    background-color: var(--indigo1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    padding: 1.5em 1.5em;
+    border-left: 10px solid var(--accent);
+}
+
+.card > .card-title{
+    font-size: 1.25rem;
+}
+
+.card > .actions{
+    display: flex;
+    margin-top: auto;
+    gap: 1rem;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.card > .card-content{
+    font-size: 0.75rem;
+}
+
+#announcements{
+    grid-area: announcements;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#announcements > .announce-title{
+    font-size: 1.5rem;
+}
+
+.card > ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
+}
+
+.card > .announces > li:not(:last-child){
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 1em;
+}
+
+#announcements > .card{
+    background-color: var(--indigo1);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em 1.5em;
+}
+
+.card > b{
+    font-size: 1.1rem;
+}
+
+#trending > .card{
+    background-color: var(--indigo1);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em 1.5em;
+}
+
+#trending{
+    grid-area: trending;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#trending > .trending-title{
+    font-size: 1.5rem;
+}
+
+.card > .trend > li{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.trend > li > .avi{
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#one{
+    background-image: url(./avatars/bun-girl.jpg);
+}
+
+#two{
+    background-image: url(./avatars/hair-guy.jpg);
+}
+
+#three{
+    background-image: url(./avatars/hair-girl.jpg);
+}
+
+#four{
+    background-image: url(./avatars/sad-guy.jpg);
+}
+
+.account > .avi{
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    background-image: url(./avatars/glasses-guy.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

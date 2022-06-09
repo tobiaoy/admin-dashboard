@@ -5,138 +5,233 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet">
 </head>
 <body>
-    <main>
-        <div id="header">
-            <div class="level-one">
-                <div class="search-bar"></div>
-                <span class="material-icons">
-                    notifications_active
-                </span>
-                <div class="user-info">
-                    <img src="" alt="profile img">
-                    <p>Username</p>
-                </div>
+    <div id="header">
+        <div id="upper">
+            <div class="search-bar">
+                <label for="search"><span class="material-icons">search</span></label>
+                <input type="search" name="search" id="search">
             </div>
-            <div class="level-two">
-                <div class="pfp"></div>
-                <div class="greeting">
-                    <p class="upper">Hi There,</p>
-                    <p class="lower">Username</p>
-                </div>
-                <div class="buttons">
-                    <button class="btn">New</button>
-                    <button class="btn">Upload</button>
-                    <button class="btn">Share</button>
-                </div>
+            <div class="account">
+                <span class="material-icons">notifications_active</span>
+                <div class="avi"></div>
+                <p class="username">Morgan Oakley</p>
             </div>
         </div>
-
-        <div id="sidebar">
-            <div class="nav-title">
-                <p>Dashboard</p>
+        <div id="lower">
+            <div class="greeting">
+                <div class="avi"></div>
+                <div class="hello">
+                    <p class="top">Hi there,</p>
+                    <p class="bottom">Morgan Oakley (@morgan)</p>
+                </div>
             </div>
-            <div class="menu">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a href="#"><span class="material-icons">house</span>
-                            "Home"
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#"><span class="material-icons">account_circle</span>
-                            "Profile"
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#"><span class="material-icons">chat</span>
-                            "Messages"
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#"><span class="material-icons">history</span>
-                            "History"
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#"><span class="material-icons">task</span>
-                            "Tasks"
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#"><span class="material-icons">diversity_3</span>
-                            "Communities"
-                        </a>
-                    </li>
-                </ul>
-
-                <ul class="settings">
-                    <li class="nav-item">
-                        <a href="#"><span class="material-icons">settings</span>
-                            "Settings"
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#"><span class="material-icons">live_help</span>
-                            "Support"
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#"><span class="material-icons">security</span>
-                            "Privacy"
-                        </a>
-                    </li>
-                </ul>
+            <div class="buttons">
+                <button>New</button>
+                <button>Upload</button>
+                <button>Share</button>
             </div>
         </div>
+    </div>
 
-        <div class="projects">
-            <div class="card">
-                <h2 class="card-title">Super Cool Project</h2>
-                <p></p>
-            </div>
-            <div class="card">
-                <h2 class="card-title">Less Cool Project</h2>
-                <p></p>
-            </div>
-            <div class="card">
-                <h2 class="card-title">Impossible App</h2>
-                <p></p>
-            </div>
-            <div class="card">
-                <h2 class="card-title">Easy Peasy App</h2>
-                <p></p>
-            </div>
-            <div class="card">
-                <h2 class="card-title">Ad Blocker</h2>
-                <p></p>
-            </div>
-            <div class="card">
-                <h2 class="card-title">Money Maker</h2>
-                <p></p>
-            </div>
+    <div id="sidebar">
+        <div id="sidebar-head">
+            <span class="material-icons">dashboard</span>
+            <p class="sidebar-title">Dashboard</p>
         </div>
 
-        <div class="announcements">
-            <h2>Announcements</h2>
-            <ul class="announce">
-                <li class="announce-item">
-                    <b>Site Maintenance</b>
-                    <p></p>
+        <div id="menu">
+            <ul class="nav">
+                <li class="nav-item">
+                    <div class="home">
+                        <span class="material-icons">house</span>
+                        <p>Home</p>
+                    </div>
                 </li>
-                <li class="announce-item">
-                    <b>Community Share Day</b>
-                    <p></p>
+                <li class="nav-item">
+                    <div class="profile">
+                        <span class="material-icons">account_circle</span>
+                        <p>Profile</p>
+                    </div>
                 </li>
-                <li class="announce-item">
-                    <b>Updated Privacy Policy</b>
-                    <p></p>
+                <li class="nav-item">
+                    <div class="message">
+                        <span class="material-icons">chat</span>
+                        <p>Messages</p>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="history">
+                        <span class="material-icons">history</span>
+                        <p>History</p>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="tasks">
+                        <span class="material-icons">task</span>
+                        <p>Tasks</p>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="communities">
+                        <span class="material-icons">diversity_3</span>
+                        <p>Communities</p>
+                    </div>
                 </li>
             </ul>
         </div>
 
-        <div class="trending"></div>
-    </main>
+        <div id="maintenance">
+            <ul class="nav">
+                <li class="nav-item">
+                    <div class="settings">
+                        <span class="material-icons">settings</span>
+                        <p>Settings</p>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="support">
+                        <span class="material-icons">live_help</span>
+                        <p>Support</p>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="privacy">
+                        <span class="material-icons">security</span>
+                        <p>Privacy</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="projects">
+            <p class="project-title">Your Projects</p>
+            <div class="cards">
+                    <div class="card">
+                        <p class="card-title">Super Cool Project</p>
+                        <p class="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="actions">
+                            <span class="material-icons-outlined">star_border</span>
+                            <span class="material-icons-outlined">visibility</span>
+                            <span class="material-icons-outlined">share</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <p class="card-title">Less Cool Project</p>
+                        <p class="card-content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <div class="actions">
+                            <span class="material-icons-outlined">star_border</span>
+                            <span class="material-icons-outlined">visibility</span>
+                            <span class="material-icons-outlined">share</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <p class="card-title">Impossible App</p>
+                        <p class="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="actions">
+                            <span class="material-icons-outlined">star_border</span>
+                            <span class="material-icons-outlined">visibility</span>
+                            <span class="material-icons-outlined">share</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <p class="card-title">Easy Peasy App</p>
+                        <p class="card-content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <div class="actions">
+                            <span class="material-icons-outlined">star_border</span>
+                            <span class="material-icons-outlined">visibility</span>
+                            <span class="material-icons-outlined">share</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <p class="card-title">Ad Blocker</p>
+                        <p class="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="actions">
+                            <span class="material-icons-outlined">star_border</span>
+                            <span class="material-icons-outlined">visibility</span>
+                            <span class="material-icons-outlined">share</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <p class="card-title">Money Maker</p>
+                        <p class="card-content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <div class="actions">
+                            <span class="material-icons-outlined">star_border</span>
+                            <span class="material-icons-outlined">visibility</span>
+                            <span class="material-icons-outlined">share</span>
+                        </div>
+                    </div>  
+            </div>
+        </div>
+
+        <div id="announcements">
+            <p class="announce-title">Announcements</p>
+            <div class="card">
+                <ul class="announces">
+                    <li class='ann-item'>
+                        <b>Site Maintenance</b>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    </li>
+                    <li class='ann-item'>
+                        <b>Community Share Day</b>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    </li>
+                    <li class='ann-item'>
+                        <b>Updated Privacy Policy</b>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="trending">
+            <p class="trending-title">Trending</p>
+            <div class="card">
+                <ul class="trend">
+                    <li class="trend-item">
+                        <div class="avi" id="one"></div>
+                        <user>
+                            <p class="username">@tegan</p>
+                            <b>World Builder</b>
+                        </user>
+                    </li>
+                    <li class="trend-item">
+                        <div class="avi" id="two"></div>
+                        <user>
+                            <p class="username">@morgan</p>
+                            <b>Super Cool Project</b>
+                        </user>
+                    </li>
+                    <li class="trend-item">
+                        <div class="avi" id="three"></div>
+                        <div id="user">
+                            <p class="username">@kendall</p>
+                            <b>Life Changing App</b>
+                        </div>
+                    </li>
+                    <li class="trend-item">
+                        <div class="avi" id="four"></div>
+                        <div id="user">
+                            <p class="username">@alex</p>
+                            <b>No Traffic Maker</b>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
