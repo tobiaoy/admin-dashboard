@@ -28,6 +28,7 @@ body{
     'sidebar header'
     'sidebar content'
     ;
+    background-color: var(--indigo3);
 }
 
 #header{
@@ -210,6 +211,7 @@ button:hover{
     'projects trending'
     ;
     gap: 2em;
+    margin-bottom: 2em;
 }
 
 #projects{
